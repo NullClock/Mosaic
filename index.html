@@ -12,10 +12,12 @@
 <body>
   <main class="relative">
     <!-- "mosáic is not a real music player blah blah blah" popup -->
-    <div id="mosaicpopupblur" class="w-[100vw] h-[100vh] bg-black/50 backdrop-blur-sm fixed inset-0 z-50 flex transition-all ease-in duration-100"></div>
+    <div id="mosaicpopupblur"
+      class="w-[100vw] h-[100vh] bg-black/50 backdrop-blur-sm fixed inset-0 z-50 flex transition-all ease-in duration-100">
+    </div>
     <div id="mosaicpopup"
       class="flex flex-col absolute bg-zinc-700 w-100 text-white rounded-2xl p-4 z-[90] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all ease-in duration-100">
-      <div class="font-bold text-3xl">Service Warning</div>
+      <div class="font-bold text-3xl">⚠ Service Warning</div>
       <div class="text-lg mt-1">Mosáic is not a real music player, only a proof of concept. It does not play real music,
         it's just a website I made to practice design.</div>
       <button class="bg-zinc-800 p-2 px-4 rounded-md mt-2 cursor-pointer" onclick="closeMosaicPopup(this)">Ok</button>
@@ -81,102 +83,175 @@
               class="w-full h-64 -my-8 mb-6 rounded-3xl" />
             <h1 class="mb-5 text-white text-3xl font-bold">Featured Songs</h1>
             <div id="featured-song-list" class="grid grid-cols-3 grid-rows-4">
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqD37vbjFZfw4V7WcyCxySj-pEm1vxLpva6jERDy-UUQ&s=10"
-                  class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">Infiel - Ao Vivo</span>
-                  <span class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Marilía
+
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqD37vbjFZfw4V7WcyCxySj-pEm1vxLpva6jERDy-UUQ&s=10"
+                    class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">Infiel - Ao Vivo</span>
+                  <span
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Marília
                     Mendonça</span>
                 </div>
               </div>
 
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img src="https://i.scdn.co/image/ab67616d0000b2735e25e034e25258b356774c79"
-                  class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">Smooth Operator</span>
-                  <span class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Sade,
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img src="https://i.scdn.co/image/ab67616d0000b2735e25e034e25258b356774c79"
+                    class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">Smooth Operator</span>
+                  <span
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Sade,
                     Carlos Sainz (CS55)</span>
                 </div>
               </div>
 
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img src="https://images.genius.com/c83c1fa7c7ea0506d4d278ae4cc11a4d.1000x1000x1.png"
-                  class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">505</span>
-                  <span class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Arctic
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img src="https://images.genius.com/c83c1fa7c7ea0506d4d278ae4cc11a4d.1000x1000x1.png"
+                    class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">505</span>
+                  <span
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Arctic
                     Monkeys</span>
                 </div>
               </div>
 
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img src="https://i.scdn.co/image/ab67616d0000b273f83bcf37c54cd2ade3ecaec8"
-                  class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">Upset & Aggressive</span>
-                  <span class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Dominic
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img src="https://i.scdn.co/image/ab67616d0000b273f83bcf37c54cd2ade3ecaec8"
+                    class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">Upset &amp; Aggressive</span>
+                  <span
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Dominic
                     Fike</span>
                 </div>
               </div>
 
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img src="https://i.scdn.co/image/ab67616d0000b2736938311000a0e494a26986e5"
-                  class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">Helmet</span>
-                  <span class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Steve
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img src="https://i.scdn.co/image/ab67616d0000b2736938311000a0e494a26986e5"
+                    class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">Helmet</span>
+                  <span
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Steve
                     Lacy</span>
                 </div>
               </div>
 
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img src="https://i.scdn.co/image/ab67616d0000b2735e25e034e25258b356774c79"
-                  class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">Like a Tattoo</span>
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img src="https://i.scdn.co/image/ab67616d0000b2735e25e034e25258b356774c79"
+                    class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">Like a Tattoo</span>
                   <span
-                    class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Sade</span>
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Sade</span>
                 </div>
               </div>
 
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img src="https://i1.sndcdn.com/artworks-DMGOvN4pQWR3-0-t500x500.jpg" class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">Sparks</span>
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img src="https://i1.sndcdn.com/artworks-DMGOvN4pQWR3-0-t500x500.jpg"
+                    class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">Sparks</span>
                   <span
-                    class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Coldplay</span>
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Coldplay</span>
                 </div>
               </div>
 
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img src="https://lrc.red/s/USUG12209352.webp" class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">Ocho Rios</span>
-                  <span class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Daniel
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img src="https://lrc.red/s/USUG12209352.webp" class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">Ocho Rios</span>
+                  <span
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Daniel
                     Caesar</span>
                 </div>
               </div>
 
-              <div id="songcard"
-                class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100">
-                <img src="https://lrc.red/s/USUG12505893.webp" class="w-12 h-12 rounded-lg" />
-                <div id="songmeta" class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full">
-                  <span class="text-lg transition-all ease-in duration-100">Who Knows</span>
-                  <span class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100">Daniel
+              <div
+                class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
+                <div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                  <img src="https://lrc.red/s/USUG12505893.webp" class="w-full h-full object-cover" />
+                  <div
+                    class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100">
+                    <i data-lucide="play" class="w-5 h-5 text-white fill-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="songmeta flex flex-col flex-1 min-w-0 text-white mx-3 border-b-3 rounded-md border-zinc-700">
+                  <span class="text-lg truncate">Who Knows</span>
+                  <span
+                    class="text-zinc-500 text-sm truncate group-hover:text-white transition-all ease-in duration-100">Daniel
                     Caesar</span>
                 </div>
               </div>
+
             </div>
 
             <div id="big-featured-songs" class="">
@@ -185,18 +260,38 @@
               </h1>
 
               <div class="flex flex-cols gap-10">
-                <div id="big-featured-song">
-                  <img src="https://lrc.red/s/USUG12505893.webp"
-                    class="w-70 h-70 rounded-2xl border-2 border-solid border-zinc-700" />
+                <div id="big-featured-song" class="group cursor-pointer w-70">
+                  <div class="relative w-70 h-70">
+                    <img src="https://lrc.red/s/USUG12505893.webp"
+                      class="w-full h-full object-cover rounded-2xl border-2 border-solid border-zinc-700" />
+
+                    <!-- hover overlay thingy -->
+                    <div
+                      class="absolute inset-0 rounded-2xl bg-black/50 flex items-center justify-center
+                             opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-opacity ease-in duration-100">
+                      <i data-lucide="play" fill="white" class="icon-lg-white"></i>
+                    </div>
+                  </div>
+
                   <div class="flex flex-col text-white mt-2 ml-1">
                     <span class="text-xl">Son of Spergy</span>
                     <span class="text-md text-zinc-500 -mt-1">Daniel Caesar (2025)</span>
                   </div>
                 </div>
 
-                <div id="big-featured-song">
-                  <img src="https://i.scdn.co/image/ab67616d0000b273f83bcf37c54cd2ade3ecaec8"
-                    class="w-70 h-70 rounded-2xl border-2 border-solid border-zinc-700" />
+                <div id="big-featured-song" class="group cursor-pointer w-70">
+                  <div class="relative w-70 h-70">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273f83bcf37c54cd2ade3ecaec8"
+                      class="w-full h-full object-cover rounded-2xl border-2 border-solid border-zinc-700" />
+
+                    <!-- hover overlay thingy -->
+                    <div
+                      class="absolute inset-0 rounded-2xl bg-black/50 flex items-center justify-center
+                             opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-opacity ease-in duration-100">
+                      <i data-lucide="play" fill="white" class="icon-lg-white"></i>
+                    </div>
+                  </div>
+
                   <div class="flex flex-col text-white mt-2 ml-1">
                     <span class="text-xl">Rocket</span>
                     <span class="text-md text-zinc-500 -mt-1">Dominic Fike (2023)</span>
