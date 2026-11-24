@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+div.main {
+  overflow-y: auto;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #dc2626;
+  stroke-width: 2;
+  vertical-align: middle;
+}
+
+.icon-lg {
+  width: 40px;
+  height: 40px;
+  color: #dc2626;
+  stroke-width: 2;
+}
+
+.icon-white {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  stroke-width: 2;
+  vertical-align: middle;
+}
+
+.icon-white-lite {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  stroke-width: 1.5;
+  vertical-align: middle;
+}
+
+.icon-white-lite,
+.icon-white-lite .lucide,
+.icon-white-lite.lucide {
+  stroke-width: 2.25;
+}
+
+.lucide {
+  stroke-width: 2.75; /* Default is 2 */
+}

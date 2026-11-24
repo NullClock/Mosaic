@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main>
+      <div class="flex">
+        <aside
+          class="w-80 shrink-0 bg-[url('/meshgrad.avif')] h-[100vh] flex flex-col"
+        >
+          <div
+            class="flex items-center justify-center gap-3 h-16 border-b py-10 border-zinc-700"
+          >
+            <i data-lucide="music" class="icon-lg"></i>
+            <span class="text-[42px] font-bold inline text-[#dc2626]">
+              Mosáic</span
+            >
+          </div>
+
+          <nav class="flex-1 px-4 py-6 bg-zinc-800 space-y-2 overflow-y-auto">
+            <a
+              href="#home"
+              id="home-navbtn"
+              class="flex items-center px-4 py-2.5 text-lg font-bold bg-red-500/35 text-white rounded-lg"
+            >
+              <i data-lucide="home" class="icon-white-lite mr-2 -mb-[0.5]"></i>
+              Home
+            </a>
+            <a
+              href="#search"
+              id="search-navbtn"
+              class="flex items-center px-4 py-2.5 text-lg font-bold text-zinc-300 rounded-lg hover:bg-red-500/10 hover:text-white transition"
+            >
+              <i
+                data-lucide="search"
+                class="icon-white-lite mr-2 -mb-[0.5]"
+              ></i>
+              Search
+            </a>
+            <a
+              href="#library"
+              id="library-navbtn"
+              class="flex items-center px-4 py-2.5 text-lg font-bold text-zinc-300 rounded-lg hover:bg-red-500/10 hover:text-white transition"
+            >
+              <i
+                data-lucide="library"
+                class="icon-white-lite mr-2 -mb-[0.5]"
+              ></i>
+              Library
+            </a>
+            <a
+              href="#settings"
+              id="settings-navbtn"
+              class="flex items-center px-4 py-2.5 text-lg font-bold text-zinc-300 rounded-lg hover:bg-red-500/10 hover:text-white transition"
+            >
+              <i
+                data-lucide="settings"
+                class="icon-white-lite mr-2 -mb-[0.5]"
+              ></i>
+              Settings
+            </a>
+          </nav>
+
+          <!-- Footer / Profile -->
+          <div class="p-4 border-t border-zinc-700 bg-zinc-800">
+            <a
+              href="#"
+              class="flex items-center space-x-3 text-sm font-medium text-zinc-300 hover:text-white"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-red-500/50 flex items-center justify-center text-white font-bold"
+              >
+                <span class="-mb-1">U</span>
+              </div>
+              <span class="-mb-1">Profile</span>
+            </a>
+          </div>
+        </aside>
+
+        <div class="main bg-zinc-900 h-[100vh] flex-1 min-w-0">
+          <div id="wireframecontainer">
+            <div id="wireframe-home" class="p-25 py-10">
+              <h1 class="text-white text-3xl mb-13 font-bold">
+                Featured Artist
+              </h1>
+              <img
+                src="/HÉLIO.png"
+                alt="Mesh gradient red Images - Free Download on Magnific (formerly Freepik)"
+                class="w-full h-64 -my-8 mb-6 rounded-3xl"
+              />
+              <h1 class="mb-5 text-white text-3xl font-bold">Featured Songs</h1>
+              <div id="featured-song-list" class="grid grid-cols-3 grid-rows-4">
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqD37vbjFZfw4V7WcyCxySj-pEm1vxLpva6jERDy-UUQ&s=10"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >Infiel - Ao Vivo</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Marilía Mendonça</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://i.scdn.co/image/ab67616d0000b2735e25e034e25258b356774c79"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >Smooth Operator</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Sade, Carlos Sainz (CS55)</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://images.genius.com/c83c1fa7c7ea0506d4d278ae4cc11a4d.1000x1000x1.png"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >505</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Arctic Monkeys</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://i.scdn.co/image/ab67616d0000b273f83bcf37c54cd2ade3ecaec8"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >Upset & Aggressive</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Dominic Fike</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://i.scdn.co/image/ab67616d0000b2736938311000a0e494a26986e5"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >Helmet</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Steve Lacy</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://i.scdn.co/image/ab67616d0000b2735e25e034e25258b356774c79"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >Like a Tattoo</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Sade</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://i1.sndcdn.com/artworks-DMGOvN4pQWR3-0-t500x500.jpg"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >Sparks</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Coldplay</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://lrc.red/s/USUG12209352.webp"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >Ocho Rios</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Daniel Caesar</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  id="songcard"
+                  class="group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100"
+                >
+                  <img
+                    src="https://lrc.red/s/USUG12505893.webp"
+                    class="w-12 h-12 rounded-lg"
+                  />
+                  <div
+                    id="songmeta"
+                    class="flex flex-col text-white mx-3 border-b-3 rounded-md border-zinc-700 w-full"
+                  >
+                    <span class="text-lg transition-all ease-in duration-100"
+                      >Who Knows</span
+                    >
+                    <span
+                      class="text-zinc-500 text-sm group-hover:text-white transition-all ease-in duration-100"
+                      >Daniel Caesar</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div id="big-featured-songs" class="">
+                <h1 class="font-bold text-3xl text-white mb-6">
+                  Featured Albums & EPs
+                </h1>
+
+                <div class="flex flex-cols gap-10">
+                  <div id="big-featured-song">
+                    <img
+                      src="https://lrc.red/s/USUG12505893.webp"
+                      class="w-70 h-70 rounded-2xl border-2 border-solid border-zinc-700"
+                    />
+                    <div class="flex flex-col text-white mt-2 ml-1">
+                      <span class="text-xl">Son of Spergy</span>
+                      <span class="text-md text-zinc-500 -mt-1"
+                        >Daniel Caesar (2025)</span
+                      >
+                    </div>
+                  </div>
+
+                  <div id="big-featured-song">
+                    <img
+                      src="https://i.scdn.co/image/ab67616d0000b273f83bcf37c54cd2ade3ecaec8"
+                      class="w-70 h-70 rounded-2xl border-2 border-solid border-zinc-700"
+                    />
+                    <div class="flex flex-col text-white mt-2 ml-1">
+                      <span class="text-xl">Rocket</span>
+                      <span class="text-md text-zinc-500 -mt-1"
+                        >Dominic Fike (2023)</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="wireframe-search" class="hidden p-15 py-10">
+              <h1 class="font-bold text-3xl text-white mb-5">
+                Find your favorite music on Mosáic.
+              </h1>
+              <input
+                class="w-full bg-zinc-700 rounded-2xl text-white p-3"
+                placeholder="Search..."
+              />
+            </div>
+
+            <div id="wireframe-library" class="hidden"></div>
+
+            <div id="wireframe-settings" class="hidden"></div>
+
+            <div id="wireframe-profile"></div>
+
+            <!-- FLOATING MUSIC PLAYER (ISLAND) -->
+
+            <div
+              id="floating-mp"
+              class="absolute py-4 bg-zinc-800 hidden rounded-4xl w-[40%] bottom-7 right-50 flex"
+            >
+              <img src="/DC.png" class="w-12 h-12 mx-4 rounded-xl" />
+
+              <div class="flex flex-1 items-center justify-center">play</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
