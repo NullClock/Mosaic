@@ -26,13 +26,13 @@
     <!-- "mosaic does not work on mobile. please open on pc" popup -->
     <!-- <div id="mosaicmobilepopupblur" class="w-[100vw] h-[100vh] bg-black/50 backdrop-blur-sm fixed inset-0 z-50 flex md:hidden"></div> -->
     <div id="mosaicmobilepopup"
-      class="absolute bg-zinc-700 flex justify-center w-[100vw] h-[100vh] text-white rounded-2xl p-4 z-90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:hidden">
+      class="absolute bg-zinc-700 flex justify-center w-[100vw] h-[100vh] text-white rounded-2xl p-4 z-90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden">
       <div class="font-bold text-center self-center text-2xl">Mosáic does not have a mobile UI. It is not for phones.
         Please open it on a desktop computer or laptop.</div>
     </div>
 
     <div class="flex">
-      <aside class="w-80 shrink-0 bg-[url('/assets/meshgrad.avif')] h-[100vh] flex flex-col overflow-y-auto">
+      <aside class="w-80 shrink-0 bg-[url('/assets/meshgrad.avif')] h-[100vh] overflow-y-auto hidden md:flex flex-col">
         <div class="flex items-center justify-center gap-3 h-16 border-b py-10 border-zinc-700">
           <i data-lucide="music" class="icon-lg"></i>
           <span class="text-[42px] font-bold inline text-[#dc2626]">
@@ -75,14 +75,20 @@
 
       <div class="main bg-zinc-900 h-[100vh] flex-1 min-w-0">
         <div id="wireframecontainer overflow-x-hidden">
-          <div id="wireframe-home" class="p-25 py-10 overflow-x-hidden">
+          <div class="flex items-center justify-center bg-[url('/assets/meshgrad.avif')] gap-3 h-16 border-b py-10 border-zinc-700 md:hidden">
+            <i data-lucide="music" class="icon-lg"></i>
+            <span class="text-[42px] font-bold inline text-[#dc2626]">
+              Mosáic</span>
+          </div>
+
+          <div id="wireframe-home" class="p-5 md:p-25 md:py-10 overflow-x-hidden">
             <h1 class="text-white text-3xl mb-13 font-bold">
               Featured Artist
             </h1>
             <img src="/assets/HÉLIO.png" alt="Mesh gradient red Images - Free Download on Magnific (formerly Freepik)"
-              class="w-full h-64 -my-8 mb-6 rounded-3xl" />
+              class="w-full h-64 -my-8 mb-6 rounded-3xl object-cover" />
             <h1 class="mb-5 text-white text-3xl font-bold">Featured Songs</h1>
-            <div id="featured-song-list" class="grid grid-cols-3 grid-rows-4">
+            <div id="featured-song-list" class="grid grid-cols-1 grid-rows-9 md:grid-cols-3 md:grid-rows-4">
 
               <div
                 class="songcard group flex p-2 rounded-lg hover:bg-zinc-800 transition-all ease-in duration-100 cursor-pointer">
