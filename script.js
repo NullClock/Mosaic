@@ -4,6 +4,7 @@ const hashnavbarcor = {
   search: 'search-navbtn',
   library: 'library-navbtn',
   settings: 'settings-navbtn',
+  profile: 'profile-navbtn'
 };
 
 const wireframes = {
@@ -12,6 +13,7 @@ const wireframes = {
   search: 'wireframe-search',
   library: 'wireframe-library',
   settings: 'wireframe-settings',
+  profile: 'wireframe-profile'
 };
 
 let currentnav = hashnavbarcor['home'];
@@ -26,6 +28,13 @@ window.onhashchange = () => {
   let elem;
 
   if (hashsanitized in hashnavbarcor) {
+    currentnavelement.classList.remove('bg-red-500/35', 'text-white');
+    currentnavelement.classList.add(
+      'hover:bg-red-500/10',
+      'hover:text-white',
+      'text-zinc-300'
+    );
+
     elem = document.getElementById(hashnavbarcor[hashsanitized]);
     elem.classList.remove(
       'hover:bg-red-500/10',
@@ -33,13 +42,6 @@ window.onhashchange = () => {
       'text-zinc-300'
     );
     elem.classList.add('bg-red-500/35', 'text-white');
-
-    currentnavelement.classList.remove('bg-red-500/35', 'text-white');
-    currentnavelement.classList.add(
-      'hover:bg-red-500/10',
-      'hover:text-white',
-      'text-zinc-300'
-    );
 
     currentnavelement = elem;
     currentnav = hashnavbarcor[hashsanitized];
@@ -51,15 +53,42 @@ window.onhashchange = () => {
 
     currentwire = wireframes[hashsanitized];
     currentwireelement = document.getElementById(currentwire);
+
+    return;
+  } else {
+    const homebtnelem = document.getElementById(hashnavbarcor['home']);
+    homebtnelem.classList.remove(
+      'hover:bg-red-500/10',
+      'hover:text-white',
+      'text-zinc-300'
+    );
+    homebtnelem.classList.add('bg-red-500/35', 'text-white');
+    return;
   }
+
+  const homebtnelem = document.getElementById(hashnavbarcor['home']);
+  homebtnelem.classList.remove(
+    'hover:bg-red-500/10',
+    'hover:text-white',
+    'text-zinc-300'
+  );
+  homebtnelem.classList.add('bg-red-500/35', 'text-white');
 };
 
 lucide.createIcons();
 window.location.hash = 'home';
 
-function searchLRCRED(title, artist) {}
+const homebtnelem = document.getElementById(hashnavbarcor['home']);
+homebtnelem.classList.remove(
+  'hover:bg-red-500/10',
+  'hover:text-white',
+  'text-zinc-300'
+);
+homebtnelem.classList.add('bg-red-500/35', 'text-white');
 
-window.closeMosaicPopup = function(element) {
+function searchLRCRED(title, artist) { }
+
+window.closeMosaicPopup = function (element) {
   element.parentElement.style.opacity = "0";
   document.getElementById("mosaicpopupblur").style.opacity = "0";
   setTimeout(() => {
