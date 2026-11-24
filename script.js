@@ -16,6 +16,8 @@ const wireframes = {
   profile: 'wireframe-profile'
 };
 
+const isMobile = () => { return window.matchMedia('(max-width: 768px)').matches; };
+
 let currentnav = hashnavbarcor['home'];
 let currentnavelement = document.getElementById(currentnav);
 
@@ -54,6 +56,8 @@ window.onhashchange = () => {
     currentwire = wireframes[hashsanitized];
     currentwireelement = document.getElementById(currentwire);
 
+    if (isMobile()) window.closeMenuMobile();
+
     return;
   } else {
     const homebtnelem = document.getElementById(hashnavbarcor['home']);
@@ -63,6 +67,7 @@ window.onhashchange = () => {
       'text-zinc-300'
     );
     homebtnelem.classList.add('bg-red-500/35', 'text-white');
+    if (isMobile()) window.closeMenuMobile();
     return;
   }
 
@@ -95,4 +100,20 @@ window.closeMosaicPopup = function (element) {
     element.parentElement.remove();
     document.getElementById("mosaicpopupblur")?.remove();
   }, 150);
+}
+
+window.menuButtonClick = function () {
+  const sidebar = document.getElementById("sidebar");
+  const mainPage = document.getElementById("mainPage");
+
+  sidebar.classList.remove("hidden");
+  mainPage.classList.add("hidden");
+  sidebar.style.opacity = "1";
+}
+
+window.closeMenuMobile = function () {
+  const sidebar = document.getElementById("sidebar");
+  const mainPage = document.getElementById("mainPage");
+  sidebar.classList.add("hidden");
+  mainPage.classList.remove("hidden");
 }
