@@ -58,3 +58,12 @@ lucide.createIcons();
 window.location.hash = 'home';
 
 function searchLRCRED(title, artist) {}
+
+window.closeMosaicPopup = function(element) {
+  element.parentElement.style.opacity = "0";
+  document.getElementById("mosaicpopupblur").style.opacity = "0";
+  setTimeout(() => {
+    element.parentElement.remove();
+    document.getElementById("mosaicpopupblur")?.remove();
+  }, 150);
+}
